@@ -1,4 +1,4 @@
-package me.jack.kotlinlibrary;
+package me.jack.library;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("me.jack.kotlinlibrary.test", appContext.getPackageName());
+        assertEquals("me.jack.kotlin.library.test", appContext.getPackageName());
     }
 }

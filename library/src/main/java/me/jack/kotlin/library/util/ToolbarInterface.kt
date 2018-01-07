@@ -1,4 +1,4 @@
-package me.jack.kotlinlibrary.util
+package me.jack.kotlin.library.util
 
 import android.graphics.drawable.Drawable
 import android.support.annotation.MenuRes
@@ -6,7 +6,7 @@ import android.support.v7.graphics.drawable.DrawerArrowDrawable
 import android.support.v7.view.menu.MenuBuilder
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
-import me.jack.kotlinlibrary.extension.ctx
+import me.jack.kotlin.library.extension.ctx
 
 /**
  * Created by Jack on 2018/1/7.

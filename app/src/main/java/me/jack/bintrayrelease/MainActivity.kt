@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_main.*
-import me.jack.kotlinlibrary.extension.ensureNotBlank
-import me.jack.kotlinlibrary.extension.highLight
-import me.jack.kotlinlibrary.extension.translucentStatus
-import me.jack.kotlinlibrary.util.ToolbarInterface
+import me.jack.kotlin.library.extension.ensureNotBlank
+import me.jack.kotlin.library.extension.highLight
+import me.jack.kotlin.library.extension.translucentStatus
+import me.jack.kotlin.library.util.ToolbarInterface
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
 

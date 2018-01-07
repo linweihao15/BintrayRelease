@@ -1,7 +1,7 @@
 package me.jack.bintrayrelease
 
 import android.app.Application
-import me.jack.kotlinlibrary.extension.DelegatesExtensions
+import me.jack.kotlin.library.extension.DelegatesExtensions
 
 /**
  * Created by Jack on 2018/1/7.

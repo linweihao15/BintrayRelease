@@ -1,4 +1,4 @@
-package me.jack.kotlinlibrary;
+package me.jack.library;
 
 import org.junit.Test;
 

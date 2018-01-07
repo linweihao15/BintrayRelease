@@ -1,4 +1,4 @@
-package me.jack.kotlinlibrary.extension
+package me.jack.kotlin.library.extension
 
 import android.support.annotation.ColorInt
 import android.text.SpannableString
