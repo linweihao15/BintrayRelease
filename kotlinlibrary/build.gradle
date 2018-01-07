@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
@@ -25,6 +27,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$support_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
@@ -32,10 +35,10 @@ dependencies {
 }
 
 publish {
-    userOrg = 'linweihao'//bintray.com用户名
-    groupId = 'me.jack'//jcenter上的路径
-    artifactId = 'kotlinlibrary'//项目名称
-    publishVersion = '1.0.0'//版本号
-    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
-    website = 'https://github.com/linweihao15/BintrayRelease'//网站，不重要；尽量模拟github上的地址
+    userOrg = 'linweihao'
+    groupId = 'me.jack'
+    artifactId = 'kotlinlibrary'
+    publishVersion = '1.0.0'
+    desc = 'Oh hi, this is a nice description for a project, right?'
+    website = 'https://github.com/linweihao15/BintrayRelease'
 }
