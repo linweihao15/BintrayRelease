@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_main.*
+import me.jack.bintrayrelease.security.SecurityHelper
 import me.jack.kotlin.library.extension.ensureNotBlank
 import me.jack.kotlin.library.extension.highLight
 import me.jack.kotlin.library.extension.translucentStatus
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity(), ToolbarInterface {
         window.translucentStatus(resources.getColor(R.color.colorPrimaryDark))
         initToolbar()
         highLight()
+        keyTest()
     }
 
     private fun initToolbar() {
@@ -35,5 +37,20 @@ class MainActivity : AppCompatActivity(), ToolbarInterface {
     private fun highLight() {
         tv.text = "".ensureNotBlank("Hello World").highLight("Hello", resources.getColor(R.color.colorAccent))
     }
+
+    private fun keyTest() {
+        generateBtn.setOnClickListener {
+            val user = input.text.toString()
+            SecurityHelper.instance.setUserName(user)
+        }
+        getBtn.setOnClickListener {
+            val name = SecurityHelper.instance.getUserName()
+            data.text = "Decrypted name: $name"
+        }
+        deleteBtn.setOnClickListener {
+            SecurityHelper.instance.deleteUserName()
+        }
+    }
+
 
 }

@@ -2,4 +2,9 @@
     <string name="app_name">BintrayRelease</string>
 
     <string name="info">Info</string>
+
+    <string name="generate">Generate</string>
+    <string name="get">Get</string>
+    <string name="delete">Delete</string>
+
 </resources>
