@@ -9,62 +9,84 @@
 
     <include layout="@layout/toolbar" />
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="Hello World!" />
-
-    <EditText
-        android:id="@+id/input"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp" />
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingEnd="15dp"
-        android:paddingStart="15dp">
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/generateBtn"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="@string/generate" />
+            android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/getBtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="15dp"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="@string/get" />
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Hello World!" />
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/deleteBtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="15dp"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="@string/delete" />
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp" />
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
 
-    <TextView
-        android:id="@+id/data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp" />
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/generateBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/generate" />
 
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/getBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/get" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="@string/delete" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/authorizeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:padding="10dp"
+                android:text="@string/authorize" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package me.jack.bintrayrelease
 
+import android.Manifest
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
@@ -8,6 +9,7 @@ import me.jack.bintrayrelease.security.SecurityHelper
 import me.jack.kotlin.library.extension.ensureNotBlank
 import me.jack.kotlin.library.extension.highLight
 import me.jack.kotlin.library.extension.translucentStatus
+import me.jack.kotlin.library.util.PermissionHelper
 import me.jack.kotlin.library.util.ToolbarInterface
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
@@ -23,6 +25,13 @@ class MainActivity : AppCompatActivity(), ToolbarInterface {
         initToolbar()
         highLight()
         keyTest()
+        authorizeTest()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        if (requestCode == PermissionHelper.REQUEST_CODE) {
+            PermissionHelper.instance.handlePermissionsResult(permissions, grantResults)
+        }
     }
 
     private fun initToolbar() {
@@ -49,6 +58,23 @@ class MainActivity : AppCompatActivity(), ToolbarInterface {
         }
         deleteBtn.setOnClickListener {
             SecurityHelper.instance.deleteUserName()
+        }
+    }
+
+    private fun authorizeTest() {
+        authorizeBtn.setOnClickListener {
+            PermissionHelper.instance.requestPermissions(Manifest.permission.ACCESS_COARSE_LOCATION)
+                    .onSuccess {
+                        toast(getString(R.string.authorize_allow))
+                    }
+                    .onFailure { _, _ ->
+                        toast(getString(R.string.authorize_deny))
+                    }
+                    .handleShowRationale {
+                        toast(getString(R.string.authorize_had_deny))
+                        true
+                    }
+                    .run(this)
         }
     }
 

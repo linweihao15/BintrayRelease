@@ -7,4 +7,9 @@
     <string name="get">Get</string>
     <string name="delete">Delete</string>
 
+    <string name="authorize">Authorize</string>
+    <string name="authorize_allow">Authorized Allowed</string>
+    <string name="authorize_deny">Authorized Denied</string>
+    <string name="authorize_had_deny">Authorized Had Denied</string>
+
 </resources>
