@@ -4,13 +4,13 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 27
+        versionCode 2
+        versionName "1.2"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -38,7 +38,7 @@ publish {
     userOrg = 'linweihao'
     groupId = 'me.jack'
     artifactId = 'kotlin-library'
-    publishVersion = '1.1.0'
+    publishVersion = '1.2.0'
     desc = 'Oh hi, this is a nice description for a project, right?'
     website = 'https://github.com/linweihao15/BintrayRelease'
 }
